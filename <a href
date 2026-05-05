@@ -334,27 +334,35 @@
       overflow: hidden;
     }
     .svc {
-      background: var(--white);
-      padding: 1.6rem 1.5rem;
-      transition: background 0.2s;
-    }
-    .svc:hover { background: var(--blue-light); }
-    .svc-num {
-      font-family: var(--serif);
-      font-size: 2rem;
-      color: var(--border);
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 0.8rem;
-    }
-    .svc h3 {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 0.35rem;
-    }
-    .svc p { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+  background: var(--white);
+  padding: 1.6rem 1.5rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.svc:hover {
+  background: var(--blue-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(13,43,78,0.10);
+  z-index: 1;
+}
+.svc-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+.svc-more {
+  display: none;
+  font-size: 12px;
+  color: var(--blue-accent);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 0.75rem;
+}
+@media (max-width: 680px) {
+  .svc-more { display: block; }
+  .svc { cursor: pointer; }
+}
  
     /* ── PROCESO ── */
     .proceso-section { background: var(--ink); padding: 4rem 2rem; }
@@ -645,29 +653,40 @@
   <h2>¿En qué te podemos asesorar?</h2>
   <div class="services-grid">
     <div class="svc">
+       <a href="/derecho-civil.html" class="svc-link">
       <div class="svc-num">01</div>
       <h3>Derecho Civil</h3>
       <p>Redacción de contratos, daños y perjuicios, derecho inmobiliario.</p>
+       <span class="svc-more">Ver más →</span>
+       </a>
     </div>
     <div class="svc">
+       <a href="/derecho-comercial.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">02</div>
       <h3>Derecho Comercial</h3>
       <p>Sociedades, contratos empresariales, relaciones comerciales.</p>
+       </a>
     </div>
     <div class="svc">
+       <a href="/defensa-consumidor.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">03</div>
       <h3>Defensa del Consumidor</h3>
       <p>Reclamos por productos defectuosos, servicios incumplidos y protección de derechos.</p>
+       </a>
     </div>
     <div class="svc">
+       <a href="/familia.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">04</div>
       <h3>Derecho de Familia</h3>
       <p>Cuota alimentaria, divorcios, régimen de visitas y violencia familiar.</p>
+       </a>
     </div>
     <div class="svc">
+       <a href="/sucesiones.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">05</div>
       <h3>Sucesiones</h3>
       <p>Declaratorias de herederos, sucesión de bienes, testamentos.</p>
+       </a>
     </div>
     <div class="svc">
        <a href="/planes-de-ahorro.html" style="text-decoration:none;color:inherit;display:block;">
@@ -677,19 +696,25 @@
     </a>
     </div>
     <div class="svc">
+       <a href="/alquileres.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">07</div>
       <h3>Alquileres</h3>
       <p>Desalojos, conflictos entre locador e inquilino.</p>
+       </a>
     </div>
     <div class="svc">
+       <a href="/deudas-veraz.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">08</div>
       <h3>Deudas y Veraz</h3>
       <p>Reclamos por inclusión indebida en Veraz, negociación de deudas, quitas y planes de regularización.</p>
+       </a>
     </div>
     <div class="svc">
+       <a href="/billeteras-virtuales.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">09</div>
       <h3>Billeteras Virtuales</h3>
       <p>Estafas, reclamos por cobros indebidos, débitos no autorizados.</p>
+       </a>
     </div>
   </div>
 </div>
