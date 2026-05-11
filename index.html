@@ -375,20 +375,40 @@
   flex: 1;
 }
 .svc-cta {
+  display: none;
+}
+.svc-hover-hint {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.3rem;
   margin-top: 1rem;
-  padding: 0.55rem 0.85rem;
-  background: #0d2b4e;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-size: 11px;
+  color: var(--blue-accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.svc:hover .svc-hover-hint {
+  opacity: 1;
 }
 @media (max-width: 680px) {
-  .svc-cta { font-size: 13px; padding: 0.65rem 0.85rem; }
+  .svc-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.65rem 0.85rem;
+    background: #0d2b4e;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .svc-hover-hint {
+    display: none;
+  }
 }
  
     /* ── PROCESO ── */
@@ -716,13 +736,19 @@
   </a>
 </div>
     <div class="svc">
-       <a href="/areas/familia.html" style="text-decoration:none;color:inherit;display:block;">
+  <a href="/areas/familia.html" class="svc-link">
+    <div class="svc-body">
       <div class="svc-num">03</div>
       <h3>Derecho de Familia</h3>
       <p>Cuota alimentaria, divorcios, sucesiones, régimen de visitas y violencia familiar.</p>
-       <span class="svc-more">Ver más →</span>
-       </a>
+      <div class="svc-hover-hint">Ver más <span>→</span></div>
     </div>
+    <div class="svc-cta">
+      Me interesa esta área
+      <span>→</span>
+    </div>
+  </a>
+</div>
     <!-- <div class="svc">
        <a href="/areas/sucesiones.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc-num">05</div>
