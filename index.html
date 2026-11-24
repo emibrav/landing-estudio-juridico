@@ -7,7 +7,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-RRZ4LXXMW1');gtag('config','G-GJEE6R9BJ7');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]');if(a)gtag('event','contacto_whatsapp',{link_url:a.href,page_path:location.pathname,transport_type:'beacon'});},true);
+    gtag('config', 'G-RRZ4LXXMW1');gtag('config','G-GJEE6R9BJ7');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]');if(!a)return;gtag('event','contacto_whatsapp',{link_url:a.href,page_path:location.pathname,transport_type:'beacon'});try{var t=new URL(a.href).searchParams.get('text')||'';e.preventDefault();location.href='/contacto-whatsapp?m='+encodeURIComponent(t);}catch(x){}},true);
   </script>
 
   <meta charset="UTF-8">
