@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Abriendo WhatsApp… | Estudio Jurídico Bravo</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRZ4LXXMW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RRZ4LXXMW1');
+    gtag('config', 'G-GJEE6R9BJ7');
+    (function () {
+      var m = new URLSearchParams(location.search).get('m') || 'Hola, quiero hacer una consulta...';
+      var u = 'https://wa.me/543518925972?text=' + encodeURIComponent(m.slice(0, 1000));
+      window.__wa = u;
+      var done = false;
+      function go() { if (!done) { done = true; location.replace(u); } }
+      gtag('event', 'contacto_whatsapp_destino', { event_callback: go, event_timeout: 1500 });
+      setTimeout(go, 1500);
+    })();
+  </script>
+  <style>
+    body{font-family:system-ui,-apple-system,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;color:#222;text-align:center}
+    a{color:#128C7E}
+  </style>
+</head>
+<body>
+  <main>
+    <p>Abriendo WhatsApp…</p>
+    <p><a id="wa" href="https://wa.me/543518925972">Si no se abre, tocá acá</a></p>
+  </main>
+  <script>if (window.__wa) document.getElementById('wa').href = window.__wa;</script>
+</body>
+</html>
